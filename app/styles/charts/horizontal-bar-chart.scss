@@ -1,0 +1,44 @@
+$axis-color: rgb(160, 182, 253);
+$chart-label-color: rgb(39, 62, 118);
+$first-bar-color: rgb(93, 122, 190);
+$grid-color: rgb(222, 230, 254);
+
+// TODO make color variable
+.horizontal-bar-chart svg {
+    .label {
+        font-size: 16px;
+        font-weight: bold;
+        fill: $chart-label-color;
+    }
+
+    .yAxisGroup path, .xAxisGroup path {
+        stroke: $axis-color;
+        stroke-width: 3;
+    }
+    
+    .grid path {
+        display: none;
+    }
+
+    .grid line {
+        stroke: $grid-color;
+        stroke-width: 3;
+    }
+    .yAxisGroup g {
+        display: none;
+    }
+
+    .xAxisGroup text {
+        fill: $chart-label-color;
+        font-size: 19px;
+        transform: translate(0, 10px);
+    }
+
+    .first-bar {
+        fill: $first-bar-color;
+    }
+
+    .second-bar {
+        fill: $axis-color;
+    }
+}
